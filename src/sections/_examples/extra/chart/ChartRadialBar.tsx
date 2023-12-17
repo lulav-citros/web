@@ -19,12 +19,12 @@ export default function ChartRadialBar() {
             gradient: {
                 colorStops: [
                     [
-                        { offset: 0, color: theme.palette.primary.light },
-                        { offset: 100, color: theme.palette.primary.main },
+                        { offset: 0, color: theme.palette.primary.light, opacity: 1 },
+                        { offset: 100, color: theme.palette.primary.main, opacity: 1 },
                     ],
                     [
-                        { offset: 0, color: theme.palette.info.light },
-                        { offset: 100, color: theme.palette.info.main },
+                        { offset: 0, color: theme.palette.info.light, opacity: 1 },
+                        { offset: 100, color: theme.palette.info.main, opacity: 1 },
                     ],
                 ],
             },

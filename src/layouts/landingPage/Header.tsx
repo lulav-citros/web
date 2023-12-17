@@ -18,23 +18,22 @@ import NavMobile from './nav/mobile';
 // import navConfig from './nav/config';
 import { navConfig, navConfigAdmin } from './nav/config';
 import NavDesktop from './nav/desktop';
-import { useAuthContext } from 'src/auth/useAuthContext';
 
 // ----------------------------------------------------------------------
 
 export default function Header() {
     const theme = useTheme();
 
-    const { user } = useAuthContext();
+    // const { user } = useAuthContext();
 
     const isDesktop = useResponsive('up', 'md');
 
     const isOffset = useOffSetTop(HEADER.H_MAIN_DESKTOP);
 
     let config = navConfig;
-    if (user && user.role == 'admin') {
-        config = navConfigAdmin;
-    }
+    // if (user && user.role == 'admin') {
+    //     config = navConfigAdmin;
+    // }
 
     return (
         <AppBar color="transparent" sx={{ boxShadow: 0 }}>

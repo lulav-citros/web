@@ -15,7 +15,6 @@ import {
     HomeAdvertisement,
     HomeColorPresets,
 } from '../sections/home';
-import { MainLayout } from 'src/layouts/repo';
 
 import { getCookies, getCookie, setCookie, deleteCookie, CookieValueTypes } from 'cookies-next';
 import { boolean } from 'yup';
@@ -26,7 +25,6 @@ import HomeCitrosStore from 'src/sections/home/HomeCitrosStore';
 import HomeCitrosAccess from 'src/sections/home/HomeCitrosAccess';
 import HomeCitrosAnalyze from 'src/sections/home/HomeCitrosAnalyze';
 import HomeCitrosReporting from 'src/sections/home/HomeCitrosReporting';
-
 
 export default function HomePage() {
     const router = useRouter();
@@ -85,7 +83,7 @@ export default function HomePage() {
                     <HomeCitrosAccess />
                     <HomeCitrosAnalyze />
                     <HomeCitrosReporting />
-                    
+
                     {/* <HomeCitrosPN /> */}
                     {/* <HomeCitrosExplain /> */}
                     {/* <HomeCitrosExample /> */}

@@ -17,21 +17,21 @@ export const navConfig = [
         icon: <Iconify icon="eva:home-fill" />,
         path: '/about',
     },
-    {
-        title: 'Documentation',
-        icon: <Iconify icon="eva:home-fill" />,
-        path: 'https://citros.io/doc/',
-    },
-    {
-        title: 'Tutorials',
-        icon: <Iconify icon="eva:home-fill" />,
-        path: '/doc/docs_tutorials',
-    },
-    {
-        title: 'Blog',
-        icon: <Iconify icon="eva:home-fill" />,
-        path: '/doc/blog',
-    },
+    // {
+    //     title: 'Documentation',
+    //     icon: <Iconify icon="eva:home-fill" />,
+    //     path: 'https://citros.io/doc/',
+    // },
+    // {
+    //     title: 'Tutorials',
+    //     icon: <Iconify icon="eva:home-fill" />,
+    //     path: '/doc/docs_tutorials',
+    // },
+    // {
+    //     title: 'Blog',
+    //     icon: <Iconify icon="eva:home-fill" />,
+    //     path: '/doc/blog',
+    // },
 ];
 export const navConfigAdmin = [
     {

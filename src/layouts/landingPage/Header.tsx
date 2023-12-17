@@ -68,9 +68,9 @@ export default function Header() {
 
                     {isDesktop && <NavDesktop isOffset={isOffset} data={config} />}
 
-                    <Button variant="contained" rel="noopener" href={PATH_AUTH.login}>
+                    {/* <Button variant="contained" rel="noopener" href={PATH_AUTH.login}>
                         Log in
-                    </Button>
+                    </Button> */}
 
                     {!isDesktop && <NavMobile isOffset={isOffset} data={config} />}
                 </Container>

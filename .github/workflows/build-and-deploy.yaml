@@ -28,7 +28,7 @@ jobs:
 
             - name: Deploy
               # configure an external GitHub Pages deploy workflow here
-              uses: JamesIves/github-pages-deploy-action@4.4.0
+              uses: JamesIves/github-pages-deploy-action
               with:
                   branch: gh-pages
                   folder: _static

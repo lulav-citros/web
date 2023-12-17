@@ -181,7 +181,7 @@ function Description() {
 
             <m.div variants={varFade().in}>
                 <Stack spacing={1.5} direction={{ xs: 'column-reverse', sm: 'row' }} sx={{ my: 5 }}>
-                    <Stack alignItems="center" spacing={2}>
+                    {/* <Stack alignItems="center" spacing={2}>
                         <Link component={NextLink} underline="none" href={PATH_AUTH.login} passHref>
                             <Button
                                 color="inherit"
@@ -199,7 +199,7 @@ function Description() {
                                 Log in
                             </Button>
                         </Link>
-                    </Stack>
+                    </Stack> */}
 
                     <Button
                         color="inherit"

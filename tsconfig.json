@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "paths": { //https://remarkablemark.org/blog/2023/06/30/react-types-reactnode-error/
+            "react": ["node_modules/@types/react"]
+        },
+        "baseUrl": ".",
+        "target": "ES2017",
+        "lib": ["es6", "dom"],
+        "strict": true,
+        "noEmit": true,
+        "allowJs": true,
+        "jsx": "preserve",
+        "module": "esnext",
+        "incremental": true,
+        "skipLibCheck": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "strictNullChecks": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "noFallthroughCasesInSwitch": true,
+        "useUnknownInCatchVariables": false,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "exclude": ["node_modules"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "node_modules/monaco-editor/monaco.d.ts"]
+}

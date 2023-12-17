@@ -1,0 +1,6 @@
+# [submodule "test_data/users/vovacooper/projects/demo_lulav_elbit"]
+# 	path = test_data/users/vovacooper/projects/demo_lulav_elbit
+# 	url = git@github.com:lulav/demo_lulav_elbit.git
+# [submodule "test_data/users/vovacooper/projects/demo_nasa"]
+# 	path = test_data/users/vovacooper/projects/demo_nasa
+# 	url = git@github.com:lulav/demo_nasa.git

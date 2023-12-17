@@ -21,8 +21,7 @@ jobs:
 
             - name: Build
               run: |
-                  yarn set version 1.22.19
-                  yarn --frozen-lockfile
+                  yarn install                                  
                   yarn build
                   yarn export
                   touch _static/.nojekyll

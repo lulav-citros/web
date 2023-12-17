@@ -30,7 +30,8 @@ if (isGithubActions) {
 module.exports = withTM({
     assetPrefix: assetPrefix,
     basePath: basePath,
-    output: 'standalone',
+    output: 'export',
+    // output: 'standalone',
     swcMinify: false,
     trailingSlash: false,
     env: {

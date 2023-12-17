@@ -24,13 +24,12 @@ jobs:
             - name: Build
               run: |
                   yarn install                                  
-                  yarn build
-                  yarn export
-                  touch _static/.nojekyll
+                  yarn build                  
+                  touch out/.nojekyll
 
             - name: Deploy
               # configure an external GitHub Pages deploy workflow here
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   branch: gh-pages
-                  folder: _static
+                  folder: _souttatic

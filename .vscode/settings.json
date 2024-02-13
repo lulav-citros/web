@@ -1,6 +1,6 @@
 {
     "svg.preview.background": "transparent",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.tabSize": 4,
 
     "editor.defaultFormatter": "esbenp.prettier-vscode",

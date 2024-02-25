@@ -22,6 +22,11 @@ export const navConfig = [
         icon: <Iconify icon="eva:home-fill" />,
         path: 'https://docs.citros.io',
     },
+    {
+        title: 'Enterprise',
+        icon: <Iconify icon="eva:home-fill" />,
+        path: '/enterprise',
+    },
     // {
     //     title: 'Tutorials',
     //     icon: <Iconify icon="eva:home-fill" />,

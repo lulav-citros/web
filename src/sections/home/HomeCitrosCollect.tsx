@@ -27,7 +27,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-    backgroundImage: `url('/assets/background/overlay_1.svg')`,
+    // backgroundImage: `url('/assets/background/overlay_1.svg')`,
     [theme.breakpoints.up('md')]: {
         padding: theme.spacing(10, 0),
     },
@@ -97,7 +97,7 @@ function Description() {
                     Launching Simulations and Collecting Data with citros run
                 </Typography>
 
-                <Code language={'python'} children={'citros run [-r]'}></Code>
+                <Code language={'python'} children={'citros run'}></Code>
 
                 <Typography
                     variant="body1"
@@ -141,11 +141,16 @@ function Content() {
                         </Box>
                         <Box sx={{ pt: 1, pl: 0.5 }}>
                             <svg width={20} viewBox="0px 0px 20px 20px" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="10px" cy="10px" r="8px" fill="#fdbc2c"/>
+                                <circle cx="10px" cy="10px" r="8px" fill="#fdbc2c" />
                             </svg>
                         </Box>
                         <Box sx={{ pt: 1, pl: 0.5 }}>
-                            <svg width={20} viewBox="0px 0px 20px 20px" fill='#28c840' xmlns="http://www.w3.org/2000/svg">
+                            <svg
+                                width={20}
+                                viewBox="0px 0px 20px 20px"
+                                fill="#28c840"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
                                 <circle cx="10px" cy="10px" r="8px" />
                             </svg>
                         </Box>
@@ -164,7 +169,7 @@ const VisitButton = (
         variant="outlined"
         target="_blank"
         rel="noopener"
-        href={'https://citros.io/doc/docs_cli/overview/cli_quickstart'}
+        href={'https://docs.citros.io/docs/general/quickstart'}
         endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
     >
         Go To Documentation

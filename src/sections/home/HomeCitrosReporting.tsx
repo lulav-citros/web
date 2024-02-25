@@ -27,7 +27,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-    backgroundImage: `url('/assets/background/overlay_1.svg')`,
+    // backgroundImage: `url('/assets/background/overlay_1.svg')`,
     [theme.breakpoints.up('md')]: {
         padding: theme.spacing(10, 0),
     },
@@ -102,7 +102,7 @@ function Description() {
                         // mb: { md: 5 },
                     }}
                 >
-                    - Trigger automatic report generation and signing pushing to a branch/ PR etc. 
+                    - Trigger automatic report generation and signing pushing to a branch/ PR etc.
                 </Typography>
                 <Typography
                     variant="body1"
@@ -143,7 +143,11 @@ function Description() {
 
 function Content() {
     return (
-        <Box sx={{ width: '100%', height: '600px', overflow: 'scroll', borderRadius: 1 }} component={m.div} variants={varFade().inDown}>
+        <Box
+            sx={{ width: '100%', height: '600px', overflow: 'scroll', borderRadius: 1 }}
+            component={m.div}
+            variants={varFade().inDown}
+        >
             <Image disabledEffect alt="rocket" src="/assets/images/home/report.png" />
         </Box>
     );

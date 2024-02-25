@@ -39,7 +39,7 @@ export default function Code({ language, children }: Props) {
                 {children}
             </SyntaxHighlighter>
 
-            <Tooltip title="Copy" style={{ position: 'absolute', right: '15px', top: '20px' }}>
+            <Tooltip title="Copy" style={{ position: 'absolute', right: '15px', top: '13px' }}>
                 <IconButton onClick={() => onCopy(children?.toString() as string)}>
                     <Iconify icon="eva:copy-fill" width={24} />
                 </IconButton>

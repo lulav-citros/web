@@ -42,12 +42,11 @@ export default function HomeCitrosAnalyze() {
         <StyledRoot>
             <Container component={MotionViewport}>
                 <Grid container alignItems="center" justifyContent="space-between" spacing={{ xs: 5, md: 0 }}>
-                    <Grid item xs={12} md={7}>
-                        <Content />
-                    </Grid>
-
                     <Grid item xs={12} md={4}>
                         <Description />
+                    </Grid>
+                    <Grid item xs={12} md={7}>
+                        <Content />
                     </Grid>
 
                     {!isDesktop && (
@@ -89,7 +88,7 @@ function Description() {
                         // mb: { md: 5 },
                     }}
                 >
-                    Verification & Validation 
+                    Verification & Validation
                 </Typography>
 
                 <Typography
@@ -158,7 +157,12 @@ function Description() {
 function Content() {
     return (
         <Box sx={{ width: '100%', height: '100%' }} component={m.div} variants={varFade().inDown}>
-            <Image sx={{ borderRadius: 1 }} disabledEffect alt="citros data analysis" src="/assets/images/home/analysis-nb1.png" />
+            <Image
+                sx={{ borderRadius: 1 }}
+                disabledEffect
+                alt="citros data analysis"
+                src="/assets/images/home/analysis-nb1.png"
+            />
         </Box>
     );
 }

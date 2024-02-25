@@ -27,7 +27,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-    backgroundImage: `url('/assets/background/overlay_1.svg')`,
+    // backgroundImage: `url('/assets/background/overlay_1.svg')`,
     [theme.breakpoints.up('md')]: {
         padding: theme.spacing(10, 0),
     },
@@ -47,8 +47,8 @@ export default function HomeCitrosAccess() {
                     </Grid>
 
                     <Grid item xs={12} md={7}>
-                        {/* <Content /> */}
-                        <Content1 />
+                        <Content />
+                        {/* <Content1 /> */}
                     </Grid>
                 </Grid>
             </Container>
@@ -84,7 +84,7 @@ function Description() {
                         mb: { md: 5 },
                     }}
                 >
-                    Download & Query data
+                    Query data
                 </Typography>
 
                 <Typography
@@ -94,10 +94,10 @@ function Description() {
                         mb: { md: 5 },
                     }}
                 >
-                    CITROS provides seamless access to all recorded simulated data via its intuitive <b>UI</b>, robust{' '}
-                    <b>API</b>, and user-friendly <b>Python package</b>. Uncover insights effortlessly with CITROS's
-                    integrated <b>Python notebook </b>
-                    environment, directly accessible from the platform's interface.
+                    CITROS provides seamless access to all recorded simulated data directly from the recorded bags, or
+                    trough a <b>postgres</b> database that will give the power of queuing the data you need in ease.
+                    CITROS comes with a data analysis package that will expose all the necessary tools to analyze the
+                    data using python. Uncover insights effortlessly with CITROS's using python notebooks.
                 </Typography>
             </m.div>
 
@@ -114,10 +114,9 @@ function Content() {
             <Code
                 language={'python'}
                 children={
-                    "from citros_data_analysis import data_access  \n\
-citros = data_access.CitrosDB()  \n\
+                    "from citros import CitrosDB  \n\
+citros = CitrosDB(simulation = 'simulaiton_1', batch='first_run')  \n\
 citros.\n\
-    batch(my_batch).\n\
     topic('/cannon/state').\n\
     sid([1,2]).\n\
     xy_plot(ax, var_x_name = 'data.data[0]',\n\

@@ -25,6 +25,8 @@ import HomeCitrosStore from 'src/sections/home/HomeCitrosStore';
 import HomeCitrosAccess from 'src/sections/home/HomeCitrosAccess';
 import HomeCitrosAnalyze from 'src/sections/home/HomeCitrosAnalyze';
 import HomeCitrosReporting from 'src/sections/home/HomeCitrosReporting';
+import HomeCitrosGetStarted from 'src/sections/home/HomeCitrosGetStarted';
+import HomeCitrosInstallation from 'src/sections/home/HomeCitrosInstallation';
 
 export default function HomePage() {
     const router = useRouter();
@@ -78,6 +80,8 @@ export default function HomePage() {
                     {/* <HomeHugePackElements /> */}
 
                     {/* <HomeForDesigner /> */}
+                    <HomeCitrosInstallation />
+                    <HomeCitrosGetStarted />
                     <HomeCitrosCollect />
                     <HomeCitrosStore />
                     <HomeCitrosAccess />

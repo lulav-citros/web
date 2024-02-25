@@ -174,8 +174,8 @@ function Description() {
 
             <m.div variants={varFade().in}>
                 <Typography variant="body1" sx={{ textAlign: 'center', fontSize: 25 }}>
-                    Cloud-based robotics development platform that empowers engineers to build better robots faster,
-                    with streamlined data management, powerful analysis tools, and automated reporting.
+                    Your All-in-One Robotic Development Toolkit CITROS is more than just a platform - it's a revolution
+                    for robotic development!
                 </Typography>
             </m.div>
 
@@ -201,7 +201,7 @@ function Description() {
                         </Link>
                     </Stack> */}
 
-                    <Button
+                    {/* <Button
                         color="inherit"
                         size="large"
                         variant="outlined"
@@ -212,7 +212,7 @@ function Description() {
                         sx={{ borderColor: 'text.primary' }}
                     >
                         Get started
-                    </Button>
+                    </Button> */}
                 </Stack>
             </m.div>
         </StyledDescription>

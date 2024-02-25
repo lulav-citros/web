@@ -11,19 +11,21 @@ import Image from '../../components/image';
 import Iconify from '../../components/iconify';
 import { MotionViewport, varFade } from '../../components/animate';
 import { TestStatusTypes } from 'src/@types/test';
+import Terminal from 'src/components/code/Terminal';
+import Code from 'src/components/code/Code';
 
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
-    padding: theme.spacing(10, 0),
+    padding: theme.spacing(5, 0),
     [theme.breakpoints.up('md')]: {
-        padding: theme.spacing(10, 0),
+        padding: theme.spacing(5, 0),
     },
 }));
 
 // ----------------------------------------------------------------------
 
-export default function HomeCitrosStore() {
+export default function HomeCitrosGetStarted() {
     const isDesktop = useResponsive('up', 'md');
 
     return (
@@ -33,8 +35,9 @@ export default function HomeCitrosStore() {
                     <Grid item xs={12} md={4}>
                         <Description />
                     </Grid>
+
                     <Grid item xs={12} md={7}>
-                        <Content />
+                        <TerminalContent />
                     </Grid>
 
                     {!isDesktop && (
@@ -64,7 +67,7 @@ function Description() {
         >
             <m.div variants={varFade().inDown}>
                 <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
-                    Store
+                    INITIALIZATION
                 </Typography>
             </m.div>
 
@@ -73,59 +76,63 @@ function Description() {
                     variant="h2"
                     sx={{
                         mt: 3,
-                        // mb: { md: 5 },
                     }}
                 >
-                    Record Simulation Data
+                    Initialize CITROS in seconds
                 </Typography>
+            </m.div>
+
+            <m.div variants={varFade().inDown}>
+                <Typography
+                    variant="body1"
+                    sx={{
+                        mt: 3,
+                        mb: { md: 2 },
+                    }}
+                >
+                    Just <b>cd</b> to your project directory and run the following command to initialize CITROS in your
+                </Typography>
+
+                <Code language={'python'} children={'citros init'}></Code>
 
                 <Typography
                     variant="body1"
                     sx={{
-                        mt: 2,
-                        // mb: { md: 5 },
-                    }}
-                >
-                    CITROS prioritizes accessibility when storing your data. It goes beyond saving simulation bags by
-                    storing comprehensive information about the host machine, including:
-                </Typography>
-                <Typography
-                    variant="body1"
-                    sx={{
-                        mt: 1,
-                        // mb: { md: 5 },
-                    }}
-                >
-                    <b>Metrics</b>: CPU, GPU, memory usage, etc.
-                </Typography>
-                <Typography
-                    variant="body1"
-                    sx={{
-                        mt: 1,
-                        // mb: { md: 5 },
-                    }}
-                >
-                    <b>Logs</b>: Standard output, standard error, ROS logs
-                </Typography>
-                <Typography
-                    variant="body1"
-                    sx={{
-                        mt: 1,
-                        // mb: { md: 5 },
-                    }}
-                >
-                    <b>Package managers</b>: pip, apt, etc.
-                </Typography>
-                <Typography
-                    variant="body1"
-                    sx={{
-                        mt: 1,
+                        mt: 3,
                         mb: { md: 5 },
                     }}
                 >
-                    This comprehensive approach ensures you have all the necessary information readily available for
-                    further analysis.
+                    *this will create local .citros folder that contains all the necessary files to start using CITROS.
                 </Typography>
+            </m.div>
+
+            <m.div variants={varFade().inDown}> {VisitButton} </m.div>
+        </Stack>
+    );
+}
+
+function Description1() {
+    const isDesktop = useResponsive('up', 'md');
+
+    return (
+        <Stack
+            sx={{
+                textAlign: {
+                    xs: 'center',
+                    md: 'left',
+                },
+            }}
+        >
+            <m.div variants={varFade().inDown}>
+                <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
+                    INITIALIZATION
+                </Typography>
+            </m.div>
+
+            <m.div variants={varFade().inDown}>
+                {/* <Terminal language={'python'} children={'pip install citros'}></Terminal> */}
+                {/* <Terminal language={'python'} children={'citros init'}></Terminal> */}
+                <Content></Content>
             </m.div>
 
             {isDesktop && <m.div variants={varFade().inDown}> {VisitButton} </m.div>}
@@ -136,6 +143,14 @@ function Description() {
 // ----------------------------------------------------------------------
 
 function Content() {
+    return (
+        // <Terminal>
+        <Code language={'python'} children={'citros init'}></Code>
+        // </Terminal>
+    );
+}
+
+function TerminalContent() {
     return (
         <Box sx={{ width: '100%', height: '100%', borderRadius: 1, overflow: 'hidden', border: '0.1px solid grey' }}>
             <Box
@@ -164,7 +179,7 @@ function Content() {
                     </Box>
                 </Stack>
             </Box>
-            <Image sx={{ borderRadius: 1 }} disabledEffect alt="rocket" src="/assets/images/home/gifs/tree.gif" />
+            <Image sx={{ borderRadius: 1 }} disabledEffect alt="rocket" src="/assets/asciinema/init.gif" />
         </Box>
     );
 }
@@ -176,7 +191,7 @@ const VisitButton = (
         variant="outlined"
         target="_blank"
         rel="noopener"
-        href={'https://citros.io/doc/docs_cli/structure/citros_structure'}
+        href={'https://docs.citros.io/docs/general/quickstart'}
         endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
     >
         Go To Documentation

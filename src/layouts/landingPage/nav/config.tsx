@@ -18,14 +18,14 @@ export const navConfig = [
         path: '/about',
     },
     {
+        title: 'Blog',
+        icon: <Iconify icon="eva:home-fill" />,
+        path: 'https://docs.citros.io/blog',
+    },
+    {
         title: 'Documentation',
         icon: <Iconify icon="eva:home-fill" />,
         path: 'https://docs.citros.io',
-    },
-    {
-        title: 'Enterprise',
-        icon: <Iconify icon="eva:home-fill" />,
-        path: '/enterprise',
     },
     // {
     //     title: 'Tutorials',

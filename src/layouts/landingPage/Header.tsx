@@ -18,6 +18,7 @@ import NavMobile from './nav/mobile';
 // import navConfig from './nav/config';
 import { navConfig, navConfigAdmin } from './nav/config';
 import NavDesktop from './nav/desktop';
+import Iconify from 'src/components/iconify/Iconify';
 
 // ----------------------------------------------------------------------
 
@@ -85,6 +86,26 @@ export default function Header() {
                             <Typography variant="subtitle1">Enterprise</Typography>
                         </Link>
                     </Badge>
+
+                    <Button
+                        href="https://github.com/lulav-citros/citros"
+                        target="_blank"
+                        color="primary"
+                        size="large"
+                        sx={{ marginLeft: 4 }}
+                    >
+                        <Iconify icon="pajamas:github" width={34} height={34}></Iconify>
+                    </Button>
+
+                    <Badge color="warning" badgeContent="examples">
+                        <Button href="https://github.com/citros-garden" target="_blank" color="success" size="large">
+                            <Iconify icon="vscode-icons:folder-type-github-opened" width={34} height={34}></Iconify>
+                        </Button>
+                    </Badge>
+
+                    <Button href="https://discord.gg/NUq89cvpsn" target="_blank" color="inherit" size="large">
+                        <Iconify icon="ic:baseline-discord" width={34} height={34}></Iconify>
+                    </Button>
 
                     {!isDesktop && <NavMobile isOffset={isOffset} data={config} />}
                 </Container>

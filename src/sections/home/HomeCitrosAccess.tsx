@@ -101,6 +101,7 @@ function Description() {
                 </Typography>
             </m.div>
 
+            <m.div variants={varFade().inDown}> {GardenButton} </m.div>
             <m.div variants={varFade().inDown}> {VisitButton} </m.div>
         </Stack>
     );
@@ -149,6 +150,32 @@ function Content1() {
         </Box>
     );
 }
+const GardenButton = (
+    <Button
+        color="inherit"
+        size="large"
+        variant="outlined"
+        target="_blank"
+        rel="noopener"
+        href={'https://github.com/citros-garden'}
+        endIcon={<Iconify icon="pajamas:github" />}
+        sx={{ m: 1 }}
+    >
+        Garden Examples
+    </Button>
+);
+{
+    /* <Button
+href="https://github.com/citros-garden"
+target="_blank"
+// variant="text"
+// color="primary"
+// size="large"
+// sx={{ marginLeft: 4 }}
+>
+<Iconify icon="pajamas:github" width={34} height={34}></Iconify>
+</Button> */
+}
 
 const VisitButton = (
     <Button
@@ -159,7 +186,8 @@ const VisitButton = (
         rel="noopener"
         href={'https://citros.io/doc/docs_data_analysis/next/data_access/getting_started'}
         endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
+        sx={{ m: 1 }}
     >
-        Go To Documentation
+        Documentation
     </Button>
 );

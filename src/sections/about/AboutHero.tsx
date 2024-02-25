@@ -60,6 +60,8 @@ export default function AboutHero() {
                     >
                         we are?
                     </Typography> */}
+                    {/* TODO: GITHUB */}
+                    {/* TODO: GITHUB Garden */}
 
                     <m.div variants={varFade().inRight}>
                         <Typography

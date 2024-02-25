@@ -25,7 +25,7 @@ export const _socials = [
         name: 'Discord',
         icon: 'ic:baseline-discord',
         color: '#7289da',
-        path: 'https://discord.gg/bRGrDPfe',
+        path: 'https://discord.gg/NUq89cvpsn',
     },
 ];
 
@@ -33,7 +33,7 @@ const LINKS = [
     {
         headline: 'CITROS',
         children: [
-            { name: 'About us', href: PATH_PAGE.about },            
+            { name: 'About us', href: PATH_PAGE.about },
             { name: 'Documentation', href: PATH_PAGE.documentation },
             { name: 'Contact us', href: PATH_PAGE.contact },
             { name: 'FAQs', href: PATH_PAGE.faqs },

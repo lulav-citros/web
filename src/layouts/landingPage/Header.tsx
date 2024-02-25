@@ -1,6 +1,6 @@
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Box, Button, AppBar, Toolbar, Container, Link, BoxProps } from '@mui/material';
+import { Box, Button, AppBar, Toolbar, Container, Link, BoxProps, Typography, Badge } from '@mui/material';
 // hooks
 import useOffSetTop from '../../hooks/useOffSetTop';
 import useResponsive from '../../hooks/useResponsive';
@@ -71,6 +71,20 @@ export default function Header() {
                     {/* <Button variant="contained" rel="noopener" href={PATH_AUTH.login}>
                         Log in
                     </Button> */}
+
+                    <Badge color="warning" badgeContent="NEW">
+                        {/* <Box sx={{ width: 40, height: 40, bgcolor: 'warning.main' }} /> */}
+                        <Link
+                            href="mailto:contact@citros.io?subject=Please tell me more about your enterprise plans."
+                            sx={{
+                                ':hover': {
+                                    textDecoration: 'none',
+                                },
+                            }}
+                        >
+                            <Typography variant="subtitle1">Enterprise</Typography>
+                        </Link>
+                    </Badge>
 
                     {!isDesktop && <NavMobile isOffset={isOffset} data={config} />}
                 </Container>

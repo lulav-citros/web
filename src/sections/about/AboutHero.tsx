@@ -11,7 +11,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
     position: 'relative',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundImage: 'url(/assets/background/overlay_1.svg), url(/assets/images/about/lulav-team.jpeg)',
+    backgroundImage: 'url(/assets/background/overlay_1.svg), url(/assets/images/about/hero.jpg)',
     padding: theme.spacing(10, 0),
     [theme.breakpoints.up('md')]: {
         height: 560,
@@ -49,19 +49,6 @@ export default function AboutHero() {
                         <TextAnimate text="we" />
                         <TextAnimate text="are?" />
                     </Stack>
-
-                    {/* <Typography
-                        variant="h2"
-                        sx={{
-                            mt: 5,
-                            color: 'common.white',
-                            fontWeight: 'fontWeightMedium',
-                        }}
-                    >
-                        we are?
-                    </Typography> */}
-                    {/* TODO: GITHUB */}
-                    {/* TODO: GITHUB Garden */}
 
                     <m.div variants={varFade().inRight}>
                         <Typography

@@ -48,6 +48,6 @@ docker run -d -p 8080:8080 --env-file .env  --name citros_web citros-web
 docker run --rm -p 8080:8080 --env-file .env  --name citros_web citros-web
 ```
 
-# usefull links
+# useful links
 
 https://www.viget.com/articles/host-build-and-deploy-next-js-projects-on-github-pages/
